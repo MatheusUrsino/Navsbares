@@ -1,0 +1,167 @@
+/* Estilo do ativo */
+.active {
+    background-color: #f6794a;
+    color: aliceblue;
+  }
+  
+  /* Logo da Navbar */
+  .logoNavBar {
+    width: 80px; /* Tamanho fixo em pixels */
+    height: 80px; /* Tamanho fixo em pixels */
+  }
+  
+  /* Navbar principal */
+  nav {
+    background-color: #002c3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    padding: 0 1rem;
+    z-index: 10;
+  }
+  
+  /* Título */
+  .title {
+    width: fit-content;
+    margin: 1rem;
+  }
+  
+  /* Lista centralizada */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* Estilo dos itens de lista */
+  nav ul li {
+    list-style: none;
+  }
+  
+  /* Links da Navbar */
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  nav ul li a:not(.active):hover {
+    background-color: #f6794a;
+    color: aliceblue;
+  }
+  
+  /* Menu mobile */
+  nav .menu {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px; /* Tamanho fixo em pixels */
+    height: 24px; /* Tamanho fixo em pixels */
+    cursor: pointer;
+  }
+  
+  nav .menu span {
+    height: 4px; /* Tamanho fixo em pixels */
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 2px; /* Tamanho fixo em pixels */
+  }
+  
+  /* Usuário e Login */
+  .user {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .user-icon {
+    width: 40px; /* Tamanho fixo em pixels */
+    height: 40px; /* Tamanho fixo em pixels */
+    scale: 1.5;
+  }
+  
+  /* Estilo do botão */
+  .button {
+    display: flex;
+    width: 4.5rem; /* Tamanho fixo em pixels */
+    align-items: center;
+    background-color: #f6794a;
+    color: #ffffff;
+    padding: 0.6rem; /* Tamanho fixo em pixels */
+    margin: 0;
+    border: none;
+    border-radius: 5px; /* Tamanho fixo em pixels */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #8b4127;
+  }
+  
+  /* Botão de Sign In */
+  .signIn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem; /* Tamanho fixo em pixels */
+    cursor: pointer;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 880px) {
+    nav .menu {
+      display: flex;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  
+    nav ul.open {
+      display: flex;
+    }
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul li a {
+      margin: 0.2rem 0;
+    }
+  
+    /* Centralização do login no mobile */
+    .user {
+      position: relative;
+      right: 0; /* Ajustar posição se necessário */
+      top: auto; /* Ajustar se necessário */
+      transform: none;
+      align-self: flex-end;
+      margin-right: 1rem;
+      margin-top: 1rem; /* Adiciona espaço acima */
+    }
+  }
+  
