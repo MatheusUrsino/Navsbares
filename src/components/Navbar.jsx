@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="title">
-        <img src="./logo.svg" alt="" className="logoNavBar" />
+        <img src="./assets/logo.png" alt="Logo">
       </Link>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
